@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+
+ <link rel="stylesheet" href="{{url_for('static',filename='css/form.css')}}">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="    {{url_for('static',filename='css/bootstrap.min.css')}}">
+  <script src="    {{url_for('static',filename='js/jquery.js')}}"></script>
+  <script src="        {{url_for('static',filename='js/bootstrap.min.js')}}"></script>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">WebSiteName</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="/">Home</a></li>
+        <li><a href="/signup">Sign up</a></li>
+        <li><a href="/about">about</a></li>
+        <li><a href="/feedback">feedback</a></li>
+
+<li><a href="/contact">contact</a></li>
+    </ul>
+  </div>
+</nav>
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <form method="POST" action="/login">
+<div class="container">
+    <div class="row">
+        <div class="col-md-offset-5 col-md-3">
+            <div class="form-login">
+            <h4>Welcome back.</h4>
+            <input type="text" id="userName" name="login" class="form-control input-sm chat-input" placeholder="username" />
+            </br>
+            <input type="password" id="userPassword" name="password"class="form-control input-sm chat-input" placeholder="password" />
+            </br>
+            <div class="wrapper">
+            <span class="group-btn">
+                <input type="submit" value="Login" class="btn btn-primary btn-md" /><i class="fa fa-sign-in"></i></a>
+
+            </span>
+            </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+  </form>
+
+
+</body>
+</html>

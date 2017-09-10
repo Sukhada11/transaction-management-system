@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+
+
+</head>
+<body>
+
+{% include 'header2.html' %}
+
+
+
+
+
+
+
+
+
+    <script src=" {{url_for('static',filename='js/jquery.js')}}"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{{url_for('static',filename='js/bootstrap.min.js')}}"></script>
+
+    <!-- Menu Toggle Script -->
+
+
+
+
+ <div class="container-fluid">
+        <div class="row">
+{% include 'sidebar.html' %}
+            </div>
+            <div class="col-md-10 col-sm-8 main-content">
+            <!--Main content code to be written here -->
+            Welcome {{name}} !
+        </div>
+    </div>
+ </div>
+</body>
+</html>
+
+
+
+
+

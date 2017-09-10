@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html lang="en">
+<head>
+
+</head>
+<body>
+
+
+{% include 'header2.html' %}
+ <div class="container-fluid">
+        <div class="row">
+           {% include 'sidebar.html' %}
+            </div>
+            <div class="col-md-10 col-sm-8 main-content">
+                        <h1>Its home of {{name}}
+</h1>
+                      <form method="POST" action="/mobilerecharge">
+<table>
+    <tr>
+<td>Mobile number</td><td><input type="text" name="mobno" /></td> <br></tr>
+  <tr><td>Account number</td><td> <input type="text" name="accno" /> </td><br></tr>
+  <tr><td>Amount</td><td><input type="text" name="amount" /></td> <br></tr>
+  <tr><td><input type="submit" value="Submit" /></td></tr>
+    </table>
+        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+
+
+    <script src=" {{url_for('static',filename='js/jquery.js')}}"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{{url_for('static',filename='js/bootstrap.min.js')}}"></script>
+
+    <!-- Menu Toggle Script -->
+
+
+
+
+
+
+</body>
+</html>

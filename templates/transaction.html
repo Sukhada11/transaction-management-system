@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+
+</head>
+<body>
+
+
+{% include 'header2.html' %}
+ <div class="container-fluid">
+        <div class="row">
+            {% include 'sidebar.html' %}
+            </div>
+            <div class="col-md-10 col-sm-8 main-content">
+                        <h1>Its home of {{name}}
+</h1>
+
+
+<br><br>
+<form action="/transaction" method="POST">
+    <table>
+        <tr><td>Account Number </td><td><input type="text" name="accno" > <br></td></tr>
+        <tr><td>Amount </td><td><input type="text" name="amount" /> <br></td></tr>
+  <tr><td><input type="radio" name="trans" value="w"> Withdraw<br></td></tr>
+ <tr> <td><input type="radio" name="trans" value="d"> Deposite<br></td></tr>
+   <tr> <td> <input type="submit" value="Submit"><br></td></tr>
+</table>
+</form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+
+
+    <script src=" {{url_for('static',filename='js/jquery.js')}}"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{{url_for('static',filename='js/bootstrap.min.js')}}"></script>
+
+    <!-- Menu Toggle Script -->
+
+
+
+
+
+</body>
+</html>

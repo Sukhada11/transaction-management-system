@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+
+</head>
+<body>
+
+
+{% include 'header2.html' %}
+
+<div class="container-fluid">
+        <div class="row">
+            <{% include 'sidebar.html' %}
+            </div>
+            <div class="col-md-10 col-sm-8 main-content">
+                        <h1>Its home of {{name}} with id
+{{id}}
+</h1>
+
+
+
+                   <form method="POST" action="/createaccount">
+
+Your account is created succsfully with account id {{ no}}
+
+
+
+
+        </form>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+
+
+    <script src=" {{url_for('static',filename='js/jquery.js')}}"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{{url_for('static',filename='js/bootstrap.min.js')}}"></script>
+
+    <!-- Menu Toggle Script -->
+
+
+
+
+
+</body>
+</html>

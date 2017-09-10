@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html lang="en">
+<head>
+
+
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+
+
+    <script>
+    var check = function() {
+  if (document.getElementById('newpassword').value ==
+    document.getElementById('confirm_password').value) {
+    document.getElementById('message').style.color = 'green';
+    document.getElementById('message').innerHTML = 'matching';
+  } else {
+    document.getElementById('message').style.color = 'red';
+    document.getElementById('message').innerHTML = 'not matching';
+  }
+}
+</script>
+</head>
+<body>
+
+
+
+{% include 'header2.html' %}
+
+ <div class="container-fluid">
+        <div class="row">
+          {% include 'sidebar.html' %}
+            </div>
+            <div class="col-md-10 col-sm-8 main-content">
+                        <h1>Its home of {{name}} </h1>
+
+
+                 <form method="POST" action="/mysettings">
+                      <table>
+   <tr><td> Enter old password :</td><td>
+  <input name="oldpassword" id="oldpassword" type="password"  />
+</td></tr>
+            <tr><td>
+                Enter new password :</td><td>
+  <input name="newpassword" id="newpassword" type="password" onkeyup="check();" />
+</td></tr>
+<br>
+            <tr><td>
+Confirm password:</td><td>
+  <input type="password" name="confirm_password" id="confirm_password"  onkeyup="check();" />
+               </td><td><span id='message'></span></td></tr>
+
+
+
+
+<tr><td><input type="submit" value="Submit" /></td></tr>
+
+        </table>
+                      </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+
+
+    <script src=" {{url_for('static',filename='js/jquery.js')}}"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{{url_for('static',filename='js/bootstrap.min.js')}}"></script>
+
+    <!-- Menu Toggle Script -->
+
+
+
+</body>
+</html>

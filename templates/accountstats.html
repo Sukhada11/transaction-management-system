@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link href="{{url_for('static',filename='css/bootstrap.min.css')}}" rel="stylesheet">
+<link href="   {{url_for('static',filename='css/sidebar.css')}}" rel="stylesheet">
+    <!-- Custom CSS -->
+<link href="   {{url_for('static',filename='css/simple-sidebar.css')}}" rel="stylesheet">
+<link rel="stylesheet" href="    {{url_for('static',filename='css/bootstrap.min.css')}}">
+  <script src="    {{url_for('static',filename='js/jquery.js')}}"></script>
+  <script src="        {{url_for('static',filename='js/bootstrap.min.js')}}"></script>
+
+</head>
+<body>
+
+
+{% include 'header2.html' %}
+
+ <div class="container-fluid">
+        <div class="row">
+           {% include 'sidebar.html' %}
+            </div>
+            <div class="col-md-10 col-sm-8 main-content">
+                        <h1>Its home of {{name}}
+</h1>
+
+                        <table border="1">
+<th>Account no</th>
+        <th>Balance</th>
+
+    {% for item in data %}
+
+
+<tr>
+    <td>{{ item[0] }}</td>
+
+    <td> {{ item[1] }}</td>
+
+</tr>
+
+   {% endfor %}
+ </table>
+
+
+
+
+
+
+</div>
+        </div>
+ </div>
+</body>
+</html>
